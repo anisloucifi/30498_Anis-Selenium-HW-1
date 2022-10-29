@@ -9,14 +9,7 @@ import pages.Login;
 import pages.MyAccount;
 
 public class testAutentofication extends BasePage {
-    /*
-    1-lunch application
-    2-click on sing in
-    3-input text email and password
-    4-click on login
-    5-Verify the existence of the sing ou link
 
-     */
     @Test
 
     public void testValidLogin(){

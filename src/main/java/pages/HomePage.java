@@ -11,9 +11,25 @@ public class HomePage extends BasePage{
     }
         @FindBy(xpath = "//*[@id=\"header\"]/div[2]/div/div/nav/div[1]/a")
         public WebElement singInLink;
+        @FindBy (id="search_query_top")
+         public WebElement searchbar;
+         @FindBy (xpath = "//form[@id='searchbox']/button")
+         public WebElement clickBotton;
 
     public Login clickonSingInLink(){
         clickOnElement(singInLink);
         return new Login();
     }
+    public SearchResult doSearch(String nameofItem){
+
+        sendKeysToElement(searchbar,nameofItem);
+        clickOnElement(clickBotton);
+        return new SearchResult();
+
+    }
+
+
+
+
+
     }
